@@ -189,7 +189,7 @@ class Phim1080Provider : MainAPI() {
         val optEncode = if (doc.text.indexOf("\"opt\":\"") != -1) {
             doc.text.substringAfter("\"opt\":\"").substringBefore("\"},")
         } else { "" }
-        val opt = decodeString(optEncode as String, 69).replace("0uut$", "_").replace("index.m3u8", "3000k/hls/mixed.m3u8").replace("https//", "https//")
+        val opt = decodeString(optEncode as String, 69).replace("0uut$", "_").replace("index.m3u8", "3000k/hls/mixed.m3u8").replace("https//", "https://")
         val hlsEncode = if (doc.text.indexOf(":{\"hls\":\"") != -1) {
             doc.text.substringAfter(":{\"hls\":\"").substringBefore("\"},")
         } else { "" }
